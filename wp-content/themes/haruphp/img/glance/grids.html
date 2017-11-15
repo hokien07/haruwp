@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BreadTalk Group - Home</title>
+<meta charset="UTF-8">
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style>
+body { overflow-x: hidden; }
+
+.index-box-header   { display: flex; justify-content: center; align-items: center; }
+.index-box-header p { margin: 0 4rem 2rem; color: #fff; font-size: 2rem; text-transform: uppercase; }
+.index-box-content  { padding: 4rem 0 !important; background: #ececec; }
+p.index-header      { font-size: 3rem; font-weight: 700; text-transform: none; }
+
+#index-portfolio                             { padding: 4rem 0; background: #fff; }
+#index-portfolio-brands                      { display: flex; margin: 0 auto; width: 90%; flex-wrap: wrap; }
+#index-portfolio-brands a                    { position: relative; width: 100%; }
+#index-portfolio-brands img                  { display: block; margin: 0 auto; }
+#index-portfolio-brands img:not(:last-child) { border-bottom: 1px solid #d2d2d2; }
+
+#index-footer           { padding: 5rem 3rem; text-align: center; }
+#index-footer h3        { color: #f00; font-size: 4rem; }
+#index-footer p         { margin: 1rem 0; font-size: 2rem; }
+#index-footer .link-btn { margin: 0; }
+
+.brand-hover-wrapper { display: none; }
+.brand-hover         { display: flex; position: absolute; top: 0; left: 0; height: 100%; width: 100%; justify-content: center; align-items: center; }
+.brand-hover p       { margin: 0; padding: 1rem 2.5rem; color: #fff; border: 0.2rem solid #fff; font-weight: 700; text-decoration: none; text-transform: uppercase; }
+
+@media screen and (min-width: 480px) {
+  #index-portfolio-brands a { width: 50%; }
+}
+
+@media screen and (min-width: 768px) {
+  #index-portfolio          { padding: 4rem 0; }
+  #index-portfolio-brands a { width: 33.3333333%; }
+  #index-footer    { padding: 8rem 4rem; }
+  #index-footer h3 { font-size: 5rem; }
+  #index-footer p  { margin: 2rem 0; }
+}
+
+@media screen and (min-width: 960px) {
+  #index-footer    { padding: 10rem 4rem; }
+  #index-footer h3 { font-size: 7rem; }
+  #index-footer p  { font-size: 3rem; }
+}
+
+@media screen and (min-width: 1200px) {
+  .index-box-content .link-btn { margin-left: 20%; margin-bottom: 4rem; }
+  .index-box-header div { width: 85%; }
+  .index-box-header p   { font-size: 2rem; }  
+  .index-box-content p  { margin: 4rem 20% !important; }
+  p.index-header        { font-size: 4rem; line-height: 5rem; }
+  #index-portfolio          { padding: 6rem 0; }
+  #index-portfolio-brands   { width: 80%; }
+  #index-portfolio-brands a { width: 20%; }
+  #index-footer    { padding: 20rem 6rem; }
+  #index-footer h3 { font-size: 8rem; }
+}
+
+/* CSS Animations */
+@-webkit-keyframes slide-left {
+  0%   { opacity: 0; -webkit-transform: translateX(-200px); }
+  60%  { opacity: 1; }
+  100% { -webkit-transform: translateX(0); }
+}
+
+@-moz-keyframes slide-left {
+  0%   { opacity: 0; -moz-transform: translateX(-200px); }
+  60%  { opacity: 1; }
+  100% { -moz-transform: translateX(0); }
+}
+
+@keyframes slide-left {
+  0%   { opacity: 0; -webkit-transform: translateX(-200px); -moz-transform: translateX(-200px); -ms-transform: translateX(-200px); -o-transform: translateX(-200px); transform: translateX(-200px); }
+  60%  { opacity: 1; }
+  100% { -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); }
+}
+
+@-webkit-keyframes slide-right {
+  0%   { opacity: 0; -webkit-transform: translateX(200px); }
+  60%  { opacity: 1; }
+  100% { -webkit-transform: translateX(0); }
+}
+
+@-moz-keyframes slide-right {
+  0%   { opacity: 0; -moz-transform: translateX(200px); }
+  60%  { opacity: 1; }
+  100% { -moz-transform: translateX(0); }
+}
+
+@keyframes slide-right {
+  0%   { opacity: 0; -webkit-transform: translateX(200px); -moz-transform: translateX(200px); -ms-transform: translateX(200px); -o-transform: translateX(200px); transform: translateX(200px); }
+  60%  { opacity: 1; }
+  100% { -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); }
+}
+
+@media screen and (min-width: 960px) {
+  .is-hidden   { visibility: hidden; }
+  .slide-left  { visibility: visible; -webkit-animation: slide-left 1s; -moz-animation: slide-left 1s; animation: slide-left 1s; }
+  .slide-right { visibility: visible; -webkit-animation: slide-right 1s; -moz-animation: slide-right 1s; animation: slide-right 1s; }
+}
+</style>
+<base href="http://www.breadtalk.com/en/" />
+</head>
+<body class="web">
+<!--<div id="noti-bar">Welcome to the beta BreadTalk Group website. Please <a href="http://www.breadtalk.com/home.php?lang=en">click here</a> if you wish to return to the previous version.</div>-->
+<nav>
+    <div id="lang-div">
+        <div id="lang-toggle">
+            <select id="toggle">
+                <option value="en" id="toggle-en">English</option>
+                <option value="zh" id="toggle-zh">中文</option>
+            </select>
+        </div>
+    </div>
+    <ul><li class="Home first active"><a href="http://www.breadtalk.com/en/" title="Home" >Home</a></li>
+<li class="About"><a href="strategy/" title="About" >About</a></li>
+<li class="Investor"><a href="http://breadtalk.listedcompany.com/?lang=en" title="Investor" >Investor</a></li>
+<li class="Partnership"><a href="partnership/" title="Partnership" >Partnership</a></li>
+<li class="People"><a href="people/" title="People" >People</a></li>
+<li class="Career"><a href="career/" title="Career" >Career</a></li>
+<li class="Contact last"><a href="contact/" title="Contact" >Contact</a></li>
+</ul>
+</nav>
+<div class="banner-wrapper with-bg with-bg-top" id="parent-banner-wrapper" data-background="assets/img/banners/banner-index.jpg">
+    <div class="banner">
+    <!--<div id="left-element">
+        <img src="assets/img/index/element-left-index.png">
+    </div>-->
+    <div class="banner-header">
+        <p class="size-m line-1">We believe</p>
+        <p class="size-l line-2">Eating is a Blessing</p>
+        <p class="size-s line-3"></p>
+    </div>
+    <!--<div id="right-element">
+        <img src="assets/img/index/element-right-index.png">
+    </div>-->
+</div>
+</div>
+<div></div>
+<div class="container">
+    <div class="row">
+    <div class="half-box content with-bg index-box-header animate-left" data-background="assets/img/index/index-01.jpg">
+        <div class="text-center">
+            <p class="index-header">Satisfying Tastes &amp; Appetites Around The World</p>
+            <p>We believe in the Power and Promise that comes from eating sumptuous food.</p>
+        </div>
+    </div>
+    <div class="half-box content index-box-content animate-right">
+        <p>Founded in 2000, the BreadTalk Group has rapidly expanded to become a distinctive household brand owner that has established its mark on the world stage with its bakery, restaurant and food atrium footprints. Today, with close to 1000 outlets in 17 locales, the BreadTalk Group produces culinary magic for everyday recipes that you savour, uniting people with good taste around the world.</p>
+        <p>With global staff strength of 7,000 employees, the Group operates more than 850 bakeries, 26 internationally acclaimed Din Tai Fung restaurants in Singapore and Thailand, as well as 60 award-winning Food Republic food atria in China, Singapore, Hong Kong, Malaysia, Taiwan and Thailand.</p>
+        <a class="link-btn" href="strategy">Learn More</a>
+    </div>
+</div>
+
+<div id="index-portfolio" class="row">
+    <div class="full-box content text-center">
+        <h2>Brand Portfolio</h2>
+        <p>Our brand portfolio comprises BreadTalk&reg;, Toast Box, Food Republic, Din Tai Fung, The Icing Room, Bread Society, RamenPlay, Thye Moh Chan and Carl's Jr. in China.</p>
+        <div id="index-portfolio-brands">
+          <a href="http://www.breadtalk.com.sg"><div class="brand-hover-wrapper" data-red="246" data-blu="139" data-grn="31"><div class="brand-hover"><p>Visit Brand Site</p></div></div><img src="assets/img/index/brand-01-bt.png" class="img-responsive"></a>
+          <a href="http://www.foodrepublic.com.sg"><div class="brand-hover-wrapper" data-red="85" data-blu="41" data-grn="136"><div class="brand-hover"><p>Visit Brand Site</p></div></div><img src="assets/img/index/brand-02-fr.png" class="img-responsive"></a>
+          <a href="http://www.toastbox.com.sg"><div class="brand-hover-wrapper" data-red="121" data-blu="36" data-grn="38"><div class="brand-hover"><p>Visit Brand Site</p></div></div><img src="assets/img/index/brand-03-tb.png" class="img-responsive"></a>
+          <a href="https://www.facebook.com/SoRamenSG/"><div class="brand-hover-wrapper" data-red="139" data-blu="14" data-grn="4"><div class="brand-hover"><p>Visit Brand Site</p></div></div><img src="assets/img/index/brand-10-sr.png" class="img-responsive"></a>
+          <a href="http://www.dintaifung.com.sg"><div class="brand-hover-wrapper" data-red="203" data-blu="28" data-grn="34"><div class="brand-hover"><p>Visit Brand Site</p></div></div><img src="assets/img/index/brand-05-dtf.png" class="img-responsive"></a>
+          <a href="http://www.theicingroom.com.sg"><div class="brand-hover-wrapper" data-red="219" data-blu="31" data-grn="124"><div class="brand-hover"><p>Visit Brand Site</p></div></div><img src="assets/img/index/brand-06-tir.png" class="img-responsive"></a>
+          <a href="http://www.thyemohchan.com"><div class="brand-hover-wrapper" data-red="221" data-blu="15" data-grn="39"><div class="brand-hover"><p>Visit Brand Site</p></div></div><img src="assets/img/index/brand-09-tmc.png" class="img-responsive"></a>
+          <a href="http://www.breadsociety.com.sg"><div class="brand-hover-wrapper" data-red="154" data-blu="140" data-grn="126"><div class="brand-hover"><p>Visit Brand Site</p></div></div><img src="assets/img/index/brand-08-bs.png" class="img-responsive"></a>
+          <a href="http://www.carlsjr.com.cn"><div class="brand-hover-wrapper" data-red="227" data-blu="24" data-grn="55"><div class="brand-hover"><p>Visit Brand Site</p></div></div><img src="assets/img/index/brand-07-cj.png" class="img-responsive"></a>
+          <a href="http://www.breadtalkihq.com/"><div class="brand-hover-wrapper" data-red="96" data-blu="94" data-grn="94"><div class="brand-hover"><p>Visit Brand Site</p></div></div><img src="assets/img/index/brand-08-ihq.png" class="img-responsive"></a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="half-box content with-bg index-box-header animate-left" data-background="assets/img/index/index-03.jpg">
+        <div class="text-center">
+            <p class="index-header">Invest in Us</p>
+            <p>Good Food and Great Experiences we commit to everyday.</p>
+        </div>
+    </div>
+    <div class="half-box content index-box-content animate-right">
+        <p>Access our financial results, the latest stock information and share prices, recent corporate presentations as well as our annual reports and circulars.</p>
+        <p>We are committed to providing timely, concise and accurate financial information.</p>
+        <a class="link-btn" href="http://breadtalk.listedcompany.com/?lang=en">Learn More</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="half-box content with-bg push index-box-header animate-right" data-background="assets/img/index/index-02.jpg">
+        <div class="text-center">
+            <p class="index-header">Be Our Partner</p>
+            <p>Find out how we are the right fit for you.</p>
+        </div>
+    </div>
+    <div class="half-box content pull index-box-content animate-left">
+        <p>Our franchises offer rewarding careers while making a real difference to the people in their communities.</p>
+        <p>We are rapidly expanding our franchise network, and are currently seeking compatible enterprises to be part of our growth and success. We have forged partnerships in China, Hong Kong, Thailand, Malaysia, Indonesia, the Philippines, Kuwait, Oman, Vietnam, Bahrain, Saudi Arabia, Sri Lanka, Lebanon, Qatar, Cambodia and Myanmar to date.</p>
+        <p>We look forward to working with passionate, like-minded partners.</p>
+        <a class="link-btn" href="partnership">Learn More</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="half-box content with-bg index-box-header animate-left" data-background="assets/img/index/index-04.jpg">
+        <div class="text-center">
+            <p class="index-header">Join Our Family</p>
+            <p>There's more to life at the BreadTalk Group</p>
+        </div>
+    </div>
+    <div class="half-box content index-box-content animate-right">
+        <p>Our employees are inspired to be the best they can be, where our team is as diverse as the markets we serve, thriving and creating outstanding delicacies year after year.</p>
+        <p>We foster an open environment where creativity thrives, and provide you with the opportunities you need to keep developing.</p>
+        <a class="link-btn" href="career">Learn More</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="half-box content with-bg push index-box-header animate-right" data-background="assets/img/index/index-05.jpg">
+        <div class="text-center">
+            <p class="index-header">Live Our Values</p>
+            <p>We set the highest standard of corporate conduct towards everyone we work with and the communities we touch.</p>
+        </div>
+    </div>
+    <div class="half-box content pull index-box-content animate-left">
+        <p>At the BreadTalk Group, we believe in giving back to the communities that we are a part of. We do our bit in supporting causes closest to our hearts, such as developing the local arts and culture scene, nurturing our next generation and supporting the local communities.</p>
+        <a class="link-btn" href="community">Learn More</a>
+    </div>
+</div>
+
+<!--
+<div id="index-footer" class="parallax-window" data-parallax="scroll" data-image-src="assets/img/index/index-footer-bg.jpg" data-speed="0.75">
+    <h3><strong>Get In Touch With Us!</strong></h3>
+    <p>Let us inspire you to the road of self-discovery.</p>
+    <a class="link-btn" href="contact">Click Here</a>
+</div>
+-->
+</div>
+<footer>
+    <div class="links-bar">
+        <div class="row">
+    <div class="one-third-box">
+        <p><a href="glance/">About</a></p>
+        <ul>
+            <li><a href="milestones/">Our Milestones</a></li>
+            <li><a href="strategy/">Our Strategy</a></li>
+            <li><a href="accolades/">Brand Accolades</a></li>
+        </ul>
+    </div>
+    
+    <div class="one-third-box">
+        <p><a href="investor/">Investor</a></p>
+        <p><a href="partnership/">Partnership</a></p>
+        <ul>
+            <li><a href="form/">Apply Now</a></li>
+        </ul>
+    </div>
+    
+    <div class="one-third-box">
+        <p><a href="people/">Community</a></p>
+        <p><a href="career/">Career</a></p>
+        <p><a href="contact/">Contact</a></p>
+    </div>
+</div>
+    </div>
+    <div class="brands-bar">
+        <p><strong>Our Brands</strong></p>
+<a href="http://www.breadtalk.com.sg" target="_blank">BreadTalk</a>
+<a href="http://www.foodrepublic.com.sg" target="_blank">Food Republic</a>
+<a href="http://www.toastbox.com.sg" target="_blank">Toast Box</a>
+<a href="https://www.facebook.com/SoRamenSG/" target="_blank">Sō</a>
+<a href="http://www.dintaifung.com.sg" target="_blank">Din Tai Fung</a>
+<a href="http://www.theicingroom.com.sg" target="_blank">The Icing Room</a>
+<a href="http://www.thyemohchan.com" target="_blank">Thye Moh Chan</a>
+<a href="http://www.breadsociety.com.sg" target="_blank">Bread Society</a>
+<a href="http://www.carlsjr.com.cn/" target="_blank">Carl's Jr.</a>
+    </div>
+    <div class="copyright-bar">
+        <p>Copyright &copy; 2017 BreadTalk Group Limited. All Rights Reserved.</p>
+<p><a href="privacy-policy/" target="_blank">Privacy Policy</a></p>
+    </div>
+</footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-17086125-13', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="/assets/js/scripts.js"></script>
+<script src="/assets/js/parallax.min.js"></script>
+<script>
+$(document).ready(function($){
+  var indexRow = $('.row'),
+    offset = 0.8;
+
+  //hide blocks which are outside the viewport
+  hideBlocks(indexRow, offset);
+
+  //on scolling, show/animate blocks when enter the viewport
+  $(window).on('scroll', function(){
+    (!window.requestAnimationFrame) 
+      ? setTimeout(function(){ showBlocks(indexRow, offset); }, 100)
+      : window.requestAnimationFrame(function(){ showBlocks(indexRow, offset); });
+  });
+
+  function hideBlocks(blocks, offset) {
+    blocks.each(function(){
+      ( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.animate-left, .animate-right').addClass('is-hidden');
+    });
+  }
+
+  function showBlocks(blocks, offset) {
+    blocks.each(function(){
+      ( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.animate-left, .animate-right').hasClass('is-hidden') ) && $(this).find('.animate-left').removeClass('is-hidden').addClass('slide-left') && $(this).find('.animate-right').removeClass('is-hidden').addClass('slide-right');
+    });
+  }
+});
+
+
+$('a', '#index-portfolio-brands').each(function(){
+  $(this).hover(function(){
+    $('.brand-hover-wrapper', this).fadeIn(100);
+  }, function(){
+    $('.brand-hover-wrapper', this).fadeOut(100);
+  });
+});
+
+$('.brand-hover-wrapper').each(function(){
+  var red = $(this).data('red');
+  var blu = $(this).data('blu');
+  var grn = $(this).data('grn');
+
+  var bgclr = + red + ', ' + blu + ', ' + grn + ', ' + ' 0.8';
+
+  $('.brand-hover', this).css('background', 'rgba(' + bgclr + ')');
+});
+</script>
+</body>
+</html>

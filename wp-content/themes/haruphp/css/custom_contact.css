@@ -1,0 +1,53 @@
+/*Contact*/
+#contact { padding: 2rem 4rem; }
+#contact h3, #contact h4, #contact h5 { margin-bottom: 1rem; }
+#contact h3, #contact h4 { font-size: 2.6rem; }
+#contact h3, #contact h5 { font-weight: 700; }
+#contact h5 { font-size: 1.6rem; color: #cda62e; }
+
+.contact-section            { padding: 6rem 0; text-align: center; border-bottom: 1px solid #c9afb5; }
+.contact-section:last-child { border-bottom: none; }
+
+.offices-container, .feedback-container, .join-container, .franchise-container { display: flex; justify-content: center; }
+.offices-container, .feedback-container, .join-container  { flex-wrap: wrap; }
+.offices-container div, .join-container div, .franchise-container div, .feedback-container span { text-align: left; }
+
+#offices-title { margin-bottom: 3rem; }
+.offices-container div { margin: 3rem; width: calc(50% - 6rem); }
+.offices-container p   { line-height: 2rem; }
+
+.feedback-container div  { display: flex; margin: 4rem 0; align-items: center; }
+.feedback-container img  { width: 125px; height: auto; }
+.feedback-container span { width: 200px; margin-left: 3rem; }
+.feedback-container h4   { margin-bottom: 3rem !important; }
+
+.join-container div { padding: 3rem; width: calc(33.3333333% - 6rem - 2px); border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.join-container div:nth-child(3n)  { border-right: none; }
+.join-container div:nth-child(n+7) { border-bottom: none; }
+
+.franchise-container     { flex-wrap: wrap; }
+.franchise-container div { padding: 3rem; width: calc(100% - 6rem); text-align: center; }
+
+.back-to-top       { display: inline-block; }
+.back-to-top span  { padding: 2rem; color: #cda62e; }
+.back-to-top:hover { cursor: pointer; }
+
+.single p, .single a { font-size: 1.8rem; }
+.single p { margin-bottom: 1rem; }
+
+@media screen and (min-width: 960px) {
+  .franchise-container div { padding: 3rem; width: 370px; text-align: left; }
+  .franchise-container div:first-child { border-right: 1px solid #ddd; }
+}
+
+@media screen and (min-width: 1200px) {
+  #contact { padding: 6rem 10rem; }
+
+  #offices-title { margin-bottom: 0; }
+  .offices-container div { margin: 6rem 0; width: 25%; }
+
+  .feedback-container img  { width: 250px; }
+  .feedback-container span { width: 400px; }
+  .feedback-container span p { margin-bottom: 1rem; }
+  .feedback-container span a { font-size: 2rem; }
+}

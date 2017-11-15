@@ -1,0 +1,26 @@
+/*people*/
+.link-btn { cursor: pointer; }
+.selected, .selected:hover { color: #aaa; border-color: #aaa; }
+
+#community-posts     { padding: 0 2rem 4rem; background: #eee; }
+#community-posts h3  { padding: 6rem 0 4rem; font-size: 3.0rem; font-weight: 700; text-align: center; }
+#community-posts a   { color: #000; }
+
+.grid-item { width: calc(100% - 5.5rem); margin: 0 1.5rem 3rem; background: #fffcf5; border-bottom: 10px #bebebe solid; }
+.grid-item h4 { margin: 3rem 2rem; font-size: 3rem; }
+.grid-item p { margin: 3rem 2rem; line-height: 2rem; }
+.grid-item img { width: 100%; height: auto; }
+
+@media screen and (min-width: 768px) {
+  .grid-item { width: calc(50% - 5rem); }
+}
+
+@media screen and (min-width: 960px) {
+  #community-summary { padding-top: 6rem; }
+  .grid-item { width: calc(33.3333333% - 4.5rem); }
+}
+
+@media screen and (min-width: 1200px) {
+  #community-summary { padding-top: 9rem; }
+  .grid-item { width: calc(25% - 4rem); }
+}

@@ -1,0 +1,94 @@
+/*index css*/
+.index-box-header   { display: flex; justify-content: center; align-items: center; }
+.index-box-header p { margin: 0 4rem 2rem; color: #fff; font-size: 2rem; text-transform: uppercase; }
+.index-box-content  { padding: 4rem 0 !important; background: #ececec; }
+p.index-header      { font-size: 3rem; font-weight: 700; text-transform: none; }
+
+#index-portfolio                             { padding: 4rem 0; background: #fff; }
+#index-portfolio-brands                      { display: flex; margin: 0 auto; width: 90%; flex-wrap: wrap; }
+#index-portfolio-brands a                    { position: relative; width: 100%; }
+#index-portfolio-brands img                  { display: block; margin: 0 auto; }
+#index-portfolio-brands img:not(:last-child) { border-bottom: 1px solid #d2d2d2; }
+
+#index-footer           { padding: 5rem 3rem; text-align: center; }
+#index-footer h3        { color: #f00; font-size: 4rem; }
+#index-footer p         { margin: 1rem 0; font-size: 2rem; }
+#index-footer .link-btn { margin: 0; }
+
+.brand-hover-wrapper { display: none; }
+.brand-hover         { display: flex; position: absolute; top: 0; left: 0; height: 100%; width: 100%; justify-content: center; align-items: center; }
+.brand-hover p       { margin: 0; padding: 1rem 2.5rem; color: #fff; border: 0.2rem solid #fff; font-weight: 700; text-decoration: none; text-transform: uppercase; }
+
+@media screen and (min-width: 480px) {
+  #index-portfolio-brands a { width: 50%; }
+}
+
+@media screen and (min-width: 768px) {
+  #index-portfolio          { padding: 4rem 0; }
+  #index-portfolio-brands a { width: 33.3333333%; }
+  #index-footer    { padding: 8rem 4rem; }
+  #index-footer h3 { font-size: 5rem; }
+  #index-footer p  { margin: 2rem 0; }
+}
+
+@media screen and (min-width: 960px) {
+  #index-footer    { padding: 10rem 4rem; }
+  #index-footer h3 { font-size: 7rem; }
+  #index-footer p  { font-size: 3rem; }
+}
+
+@media screen and (min-width: 1200px) {
+  .index-box-content .link-btn { margin-left: 20%; margin-bottom: 4rem; }
+  .index-box-header div { width: 85%; }
+  .index-box-header p   { font-size: 2rem; }  
+  .index-box-content p  { margin: 4rem 20% !important; }
+  p.index-header        { font-size: 4rem; line-height: 5rem; }
+  #index-portfolio          { padding: 6rem 0; }
+  #index-portfolio-brands   { width: 80%; }
+  #index-portfolio-brands a { width: 20%; }
+  #index-footer    { padding: 20rem 6rem; }
+  #index-footer h3 { font-size: 8rem; }
+}
+
+/* CSS Animations */
+@-webkit-keyframes slide-left {
+  0%   { opacity: 0; -webkit-transform: translateX(-200px); }
+  60%  { opacity: 1; }
+  100% { -webkit-transform: translateX(0); }
+}
+
+@-moz-keyframes slide-left {
+  0%   { opacity: 0; -moz-transform: translateX(-200px); }
+  60%  { opacity: 1; }
+  100% { -moz-transform: translateX(0); }
+}
+
+@keyframes slide-left {
+  0%   { opacity: 0; -webkit-transform: translateX(-200px); -moz-transform: translateX(-200px); -ms-transform: translateX(-200px); -o-transform: translateX(-200px); transform: translateX(-200px); }
+  60%  { opacity: 1; }
+  100% { -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); }
+}
+
+@-webkit-keyframes slide-right {
+  0%   { opacity: 0; -webkit-transform: translateX(200px); }
+  60%  { opacity: 1; }
+  100% { -webkit-transform: translateX(0); }
+}
+
+@-moz-keyframes slide-right {
+  0%   { opacity: 0; -moz-transform: translateX(200px); }
+  60%  { opacity: 1; }
+  100% { -moz-transform: translateX(0); }
+}
+
+@keyframes slide-right {
+  0%   { opacity: 0; -webkit-transform: translateX(200px); -moz-transform: translateX(200px); -ms-transform: translateX(200px); -o-transform: translateX(200px); transform: translateX(200px); }
+  60%  { opacity: 1; }
+  100% { -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); }
+}
+
+@media screen and (min-width: 960px) {
+  .is-hidden   { visibility: hidden; }
+  .slide-left  { visibility: visible; -webkit-animation: slide-left 1s; -moz-animation: slide-left 1s; animation: slide-left 1s; }
+  .slide-right { visibility: visible; -webkit-animation: slide-right 1s; -moz-animation: slide-right 1s; animation: slide-right 1s; }
+}
